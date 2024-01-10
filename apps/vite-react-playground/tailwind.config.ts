@@ -1,0 +1,16 @@
+import { tailwindPlugin } from "@components/react-tailwind";
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "../../node_modules/@components/react-tailwind/dist/**/*.{mjs,js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [tailwindPlugin],
+};
+
+export default config;
