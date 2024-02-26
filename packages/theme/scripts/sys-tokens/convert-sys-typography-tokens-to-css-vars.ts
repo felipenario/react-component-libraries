@@ -19,20 +19,18 @@ export const convertSysTypographyTokensToCssVariables = () => {
           cssVariables.push(
             `--sys-typography-${typographyType}-${lodash.kebabCase(
               typographyTypeProperty
-            )}-${typographyTypePropertyToken}: ${typographyTypePropertyTokenValue}`
+            )}-${typographyTypePropertyToken}: ${typographyTypePropertyTokenValue};`
           );
         }
       } else {
         cssVariables.push(
           `--sys-typography-${typographyType}-${lodash.kebabCase(
             typographyTypeProperty
-          )}: ${typographyTypePropertyValue}`
+          )}: ${typographyTypePropertyValue};`
         );
       }
     }
   }
-
-  console.log(cssVariables);
 
   return cssVariables;
 };

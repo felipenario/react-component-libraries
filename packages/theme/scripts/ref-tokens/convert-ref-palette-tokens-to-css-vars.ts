@@ -5,7 +5,7 @@ export const convertRefPaletteTokensToCssVars = () => {
 
   for (const [colorName, shades] of Object.entries(RefPaletteTokens)) {
     for (const [shade, hexCode] of Object.entries(shades)) {
-      cssVariables.push(`--ref-palette-${colorName}-${shade}: ${hexCode}`);
+      cssVariables.push(`--ref-palette-${colorName}-${shade}: ${hexCode};`);
     }
   }
 

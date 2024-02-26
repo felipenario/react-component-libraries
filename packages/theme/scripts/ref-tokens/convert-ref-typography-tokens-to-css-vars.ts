@@ -12,7 +12,7 @@ export const converRefTypographyTokensToCssVars = () => {
       cssVariables.push(
         `--ref-typography-font-size-${fontSizeTokenScale}-${lodash.kebabCase(
           fontSizeToken
-        )}: ${hexCode}`
+        )}: ${hexCode};`
       );
     }
   }
@@ -22,7 +22,7 @@ export const converRefTypographyTokensToCssVars = () => {
     RefTypographyTokens.fontStyle
   )) {
     cssVariables.push(
-      `--ref-typography-font-style-${fontStyleToken}: ${fontStyleValue}`
+      `--ref-typography-font-style-${fontStyleToken}: ${fontStyleValue};`
     );
   }
 
@@ -31,7 +31,7 @@ export const converRefTypographyTokensToCssVars = () => {
     RefTypographyTokens.fontWeight
   )) {
     cssVariables.push(
-      `--ref-typography-font-weight-${fontWeightToken}: ${fontWeightValue}`
+      `--ref-typography-font-weight-${fontWeightToken}: ${fontWeightValue};`
     );
   }
 
@@ -40,7 +40,7 @@ export const converRefTypographyTokensToCssVars = () => {
     RefTypographyTokens.lineHeight
   )) {
     cssVariables.push(
-      `--ref-typography-font-weight-${lineHeightToken}: ${lineHeightValue}`
+      `--ref-typography-font-weight-${lineHeightToken}: ${lineHeightValue};`
     );
   }
 

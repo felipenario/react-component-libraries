@@ -11,14 +11,14 @@ export const convertSysThemeTokensToCssVars = () => {
   // Light Theme tokens.
   for (const [tokenType, hexCode] of Object.entries(SysLightThemeTokens)) {
     lightThemeCssVariables.push(
-      `--sys-color-${lodash.kebabCase(tokenType)}: ${hexCode}`
+      `--sys-color-${lodash.kebabCase(tokenType)}: ${hexCode};`
     );
   }
 
   // Dark Theme tokens.
   for (const [tokenType, hexCode] of Object.entries(SysDarkThemeTokens)) {
     darkThemeCssVariables.push(
-      `--sys-dark-${lodash.kebabCase(tokenType)}: ${hexCode}`
+      `--sys-dark-${lodash.kebabCase(tokenType)}: ${hexCode};`
     );
   }
 

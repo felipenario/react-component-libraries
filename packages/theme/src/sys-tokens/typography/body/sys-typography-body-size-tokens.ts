@@ -1,5 +1,15 @@
 import { RefTypographyFontSizeTokens } from "../../../ref-tokens/typography/font-size/ref-typography-font-size-tokens";
 
+export const SysTypographyBodySizeMobileTokens = {
+  xxxl: RefTypographyFontSizeTokens.mobile.fontSize600,
+  xxl: RefTypographyFontSizeTokens.mobile.fontSize500,
+  xl: RefTypographyFontSizeTokens.mobile.fontSize400,
+  l: RefTypographyFontSizeTokens.mobile.fontSize300,
+  m: RefTypographyFontSizeTokens.mobile.fontSize200,
+  s: RefTypographyFontSizeTokens.mobile.fontSize100,
+  xs: RefTypographyFontSizeTokens.mobile.fontSize75,
+};
+
 export const SysTypographyBodySizeTokens = {
   xxxl:
     RefTypographyFontSizeTokens.desktop.fontSize600 ||
@@ -23,3 +33,7 @@ export const SysTypographyBodySizeTokens = {
     RefTypographyFontSizeTokens.desktop.fontSize75 ||
     RefTypographyFontSizeTokens.mobile.fontSize75,
 } as const;
+
+const teste: typeof SysTypographyBodySizeTokens = {
+  l: ""
+};

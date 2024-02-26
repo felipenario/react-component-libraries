@@ -10,7 +10,7 @@ export const convertSysElevationTokensToCssVars = () => {
     cssVariables.push(
       `--sys-elevation-${lodash.kebabCase(
         elevationToken
-      )}: ${elevationTokenValue}`
+      )}: ${elevationTokenValue};`
     );
   }
 

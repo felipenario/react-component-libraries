@@ -11,7 +11,7 @@ export const convertSysShapeTokensToCssVars = () => {
     SysShapeBorderWidthTokens
   )) {
     cssVariables.push(
-      `--sys-shape-border-width-${borderWidthToken}: ${borderWidthTokenValue}`
+      `--sys-shape-border-width-${borderWidthToken}: ${borderWidthTokenValue};`
     );
   }
 
@@ -20,7 +20,7 @@ export const convertSysShapeTokensToCssVars = () => {
     SysShapeCornerTokens
   )) {
     cssVariables.push(
-      `--sys-shape-corner-${borderRadiusToken}: ${borderRadiusTokenValue}`
+      `--sys-shape-corner-${borderRadiusToken}: ${borderRadiusTokenValue};`
     );
   }
 
