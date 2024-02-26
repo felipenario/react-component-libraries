@@ -3,6 +3,9 @@ import { tailwindPlugin } from "./src/plugin";
 
 const config: Config = {
   content: [],
+  theme: {
+    colors: {}
+  },
   plugins: [tailwindPlugin],
 };
 

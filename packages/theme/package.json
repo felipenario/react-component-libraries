@@ -1,0 +1,16 @@
+{
+  "name": "@components/theme",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "css-vars": "node --experimental-specifier-resolution=node --loader ts-node/esm scripts/sys-tokens/convert-sys-typography-tokens-to-css-vars.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4"
+  }
+}
