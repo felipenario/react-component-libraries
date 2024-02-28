@@ -11,4 +11,4 @@ export const SysLightThemeTokens = {
   onBackground: RefPaletteTokens.neutral[950],
   onSurface: RefPaletteTokens.neutral[950],
   onError: RefPaletteTokens.neutral[50],
-};
+} as const;

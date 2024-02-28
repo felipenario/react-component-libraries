@@ -2,7 +2,11 @@ import { SysTypographyTokens } from "../../src/sys-tokens/typography";
 import lodash from "lodash";
 
 export const convertSysTypographyTokensToCssVariables = () => {
-  const cssVariables: string[] = [];
+  const commonTypographyCssVariables: string[] = [];
+
+  const desktopFontSizeCssVariables: string[] = [];
+
+  const mobileFontSizeCssVariables: string[] = [];
 
   for (const [typographyType, typographyTypePropertyObject] of Object.entries(
     SysTypographyTokens
@@ -11,19 +15,47 @@ export const convertSysTypographyTokensToCssVariables = () => {
       typographyTypeProperty,
       typographyTypePropertyValue,
     ] of Object.entries(typographyTypePropertyObject)) {
-      if (typeof typographyTypePropertyValue === "object") {
+      if (typographyTypeProperty === "size") {
         for (const [
-          typographyTypePropertyToken,
-          typographyTypePropertyTokenValue,
+          typographyTypeFontSizeScaleToken,
+          typographyTypeFontSizeScaleTokenValue,
         ] of Object.entries(typographyTypePropertyValue)) {
-          cssVariables.push(
+          for (const [
+            typographyTypeFontSizeToken,
+            typographyTypeFontSizeTokenValue,
+          ] of Object.entries(typographyTypeFontSizeScaleTokenValue as any)) {
+            if (typographyTypeFontSizeScaleToken === "desktop") {
+              desktopFontSizeCssVariables.push(
+                `--sys-typography-${typographyType}-${lodash.kebabCase(
+                  typographyTypeProperty
+                )}-${typographyTypeFontSizeToken}: ${typographyTypeFontSizeTokenValue};`
+              );
+            } else {
+              mobileFontSizeCssVariables.push(
+                `--sys-typography-${typographyType}-${lodash.kebabCase(
+                  typographyTypeProperty
+                )}-${typographyTypeFontSizeToken}: ${typographyTypeFontSizeTokenValue};`
+              );
+            }
+          }
+        }
+      }
+
+      if (typographyTypeProperty === "fontWeight") {
+        for (const [
+          typographyTypeFontWeightToken,
+          typographyTypePropertyFontWeightTokenValue,
+        ] of Object.entries(typographyTypePropertyValue)) {
+          commonTypographyCssVariables.push(
             `--sys-typography-${typographyType}-${lodash.kebabCase(
               typographyTypeProperty
-            )}-${typographyTypePropertyToken}: ${typographyTypePropertyTokenValue};`
+            )}-${typographyTypeFontWeightToken}: ${typographyTypePropertyFontWeightTokenValue};`
           );
         }
-      } else {
-        cssVariables.push(
+      }
+
+      if (typographyTypeProperty === "lineHeight") {
+        commonTypographyCssVariables.push(
           `--sys-typography-${typographyType}-${lodash.kebabCase(
             typographyTypeProperty
           )}: ${typographyTypePropertyValue};`
@@ -32,5 +64,9 @@ export const convertSysTypographyTokensToCssVariables = () => {
     }
   }
 
-  return cssVariables;
+  return {
+    commonTypographyCssVariables,
+    desktopFontSizeCssVariables,
+    mobileFontSizeCssVariables,
+  };
 };

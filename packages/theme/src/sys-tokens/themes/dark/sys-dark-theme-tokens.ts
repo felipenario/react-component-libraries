@@ -11,4 +11,4 @@ export const SysDarkThemeTokens = {
   onBackground: RefPaletteTokens.neutral[50],
   onSurface: RefPaletteTokens.teal[950],
   onError: RefPaletteTokens.neutral[50],
-};
+} as const;

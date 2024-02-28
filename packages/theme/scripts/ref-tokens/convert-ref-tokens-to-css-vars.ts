@@ -12,7 +12,7 @@ export const convertRefTokensToCssVars = async () => {
   const formattedContent = await format(
     `:root {
     ${refTokensCssVars.join("\n")}
-}`,
+    }`,
     {
       parser: "css",
     }

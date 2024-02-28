@@ -1,0 +1,103 @@
+:root {
+  --sys-elevation-level-0: rgba(0, 0, 0, 0.2) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+  --sys-elevation-level-1: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  --sys-elevation-level-2: rgba(0, 0, 0, 0.2) 0px 3px 3px -2px,
+    rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px;
+  --sys-elevation-level-3: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+  --sys-elevation-level-4: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px,
+    rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+  --sys-elevation-level-5: rgba(0, 0, 0, 0.2) 0px 7px 8px -4px,
+    rgba(0, 0, 0, 0.14) 0px 12px 17px 2px, rgba(0, 0, 0, 0.12) 0px 5px 22px 4px;
+  --sys-shape-border-width-1: 1px;
+  --sys-shape-border-width-2: 2px;
+  --sys-shape-border-width-4: 4px;
+  --sys-shape-corner-none: 0;
+  --sys-shape-corner-xs: 4px;
+  --sys-shape-corner-s: 8px;
+  --sys-shape-corner-m: 12px;
+  --sys-shape-corner-l: 16px;
+  --sys-shape-corner-xl: 28px;
+  --sys-shape-corner-full: 9999px;
+  --sys-typography-body-font-weight-default: 400;
+  --sys-typography-body-line-height: 1.5;
+  --sys-typography-detail-font-weight-light: 400;
+  --sys-typography-detail-font-weight-default: 700;
+  --sys-typography-detail-line-height: 1.3;
+  --sys-typography-heading-line-height: 1.3;
+  --sys-typography-body-size-xxxl: 1.938rem;
+  --sys-typography-body-size-xxl: 1.688rem;
+  --sys-typography-body-size-xl: 1.5rem;
+  --sys-typography-body-size-l: 1.375rem;
+  --sys-typography-body-size-m: 1.188rem;
+  --sys-typography-body-size-s: 1.063rem;
+  --sys-typography-body-size-xs: 0.938rem;
+  --sys-typography-detail-size-xl: 1.188rem;
+  --sys-typography-detail-size-l: 1.063rem;
+  --sys-typography-detail-size-m: 0.938rem;
+  --sys-typography-detail-size-s: 0.813rem;
+  --sys-typography-heading-size-xxxl: 4.375rem;
+  --sys-typography-heading-size-xxl: 3.438rem;
+  --sys-typography-heading-size-xl: 2.75rem;
+  --sys-typography-heading-size-l: 2.125rem;
+  --sys-typography-heading-size-m: 1.688rem;
+  --sys-typography-heading-size-s: 1.375rem;
+  --sys-typography-heading-size-xs: 1.188rem;
+  --sys-typography-heading-size-xxs: 1.063rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --sys-color-primary: #0369a1;
+    --sys-color-secondary: #0f766e;
+    --sys-color-background: #f9fafb;
+    --sys-color-surface: #f9fafb;
+    --sys-color-error: #dc2626;
+    --sys-color-on-primary: #0c4a6e;
+    --sys-color-on-secondary: #134e4a;
+    --sys-color-on-background: #030712;
+    --sys-color-on-surface: #030712;
+    --sys-color-on-error: #f9fafb;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sys-color-primary: #082f49;
+    --sys-color-secondary: #042f2e;
+    --sys-color-background: #082f49;
+    --sys-color-surface: #0f766e;
+    --sys-color-error: #dc2626;
+    --sys-color-on-primary: #0369a1;
+    --sys-color-on-secondary: #0f766e;
+    --sys-color-on-background: #f9fafb;
+    --sys-color-on-surface: #042f2e;
+    --sys-color-on-error: #f9fafb;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --sys-typography-body-size-xxxl: 1.563rem;
+    --sys-typography-body-size-xxl: 1.375rem;
+    --sys-typography-body-size-xs: 0.75rem;
+    --sys-typography-body-size-xl: 1.25rem;
+    --sys-typography-body-size-s: 0.875rem;
+    --sys-typography-body-size-m: 1rem;
+    --sys-typography-body-size-l: 1.125rem;
+    --sys-typography-detail-size-xl: 1rem;
+    --sys-typography-detail-size-l: 0.875rem;
+    --sys-typography-detail-size-m: 0.75rem;
+    --sys-typography-detail-size-s: 0.688rem;
+    --sys-typography-heading-size-xxxl: 3.75rem;
+    --sys-typography-heading-size-xxl: 2.813rem;
+    --sys-typography-heading-size-xl: 2.25rem;
+    --sys-typography-heading-size-l: 1.75rem;
+    --sys-typography-heading-size-m: 1.375rem;
+    --sys-typography-heading-size-s: 1.125rem;
+    --sys-typography-heading-size-xs: 1rem;
+    --sys-typography-heading-size-xxs: 0.875rem;
+  }
+}
