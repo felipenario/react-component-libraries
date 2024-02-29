@@ -1,3 +1,5 @@
+import { SysShapeCornerTokensType } from "./sys-shape-corner-tokens.types";
+
 export const SysShapeCornerTokens = {
   none: "0",
   xs: "4px",
@@ -6,4 +8,4 @@ export const SysShapeCornerTokens = {
   l: "16px",
   xl: "28px",
   full: "9999px",
-} as const;
+} as const satisfies SysShapeCornerTokensType;

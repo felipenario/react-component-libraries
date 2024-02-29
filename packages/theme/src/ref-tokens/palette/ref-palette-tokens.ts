@@ -12,6 +12,7 @@ import { RefPaletteOrangeTokens } from "./orange/ref-palette-orange-tokens";
 import { RefPalettePinkTokens } from "./pink/ref-palette-pink-tokens";
 import { RefPalettePurpleTokens } from "./purple/ref-palette-purple-tokens";
 import { RefPaletteRedTokens } from "./red/ref-palette-red-tokens";
+import { RefPaletteTokensType } from "./ref-palette-tokens.types";
 import { RefPaletteRoseTokens } from "./rose/ref-palette-rose-tokens";
 import { RefPaletteSkyTokens } from "./sky/ref-palette-sky-tokens";
 import { RefPaletteSlateTokens } from "./slate/ref-palette-slate-tokens";
@@ -44,4 +45,4 @@ export const RefPaletteTokens = {
   violet: RefPaletteVioletTokens,
   yellow: RefPaletteYellowTokens,
   zinc: RefPaletteZincTokens,
-} as const;
+} as const satisfies RefPaletteTokensType;

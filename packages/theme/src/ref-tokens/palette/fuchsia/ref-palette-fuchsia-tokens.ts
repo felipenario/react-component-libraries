@@ -1,3 +1,5 @@
+import { RefPaletteShadeType } from "../ref-palette-tokens.types";
+
 export const RefPaletteFuchsiaTokens = {
   50: "#fdf4ff",
   100: "#fae8ff",
@@ -10,4 +12,4 @@ export const RefPaletteFuchsiaTokens = {
   800: "#86198f",
   900: "#701a75",
   950: "#4a044e",
-} as const;
+} as const satisfies RefPaletteShadeType;

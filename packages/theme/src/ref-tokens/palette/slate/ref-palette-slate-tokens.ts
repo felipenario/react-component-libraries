@@ -1,3 +1,5 @@
+import { RefPaletteShadeType } from "../ref-palette-tokens.types";
+
 export const RefPaletteSlateTokens = {
   50: "#f8fafc",
   100: "#f1f5f9",
@@ -10,4 +12,4 @@ export const RefPaletteSlateTokens = {
   800: "#1e293b",
   900: "#0f172a",
   950: "#020617",
-} as const;
+} as const satisfies RefPaletteShadeType;

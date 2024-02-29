@@ -1,22 +1,5 @@
-import { RefTypographyFontSizeTokens } from "../../../ref-tokens/typography/font-size/ref-typography-font-size-tokens";
-import { ValueOf } from "../../../utils/valueOf";
-
-const SysTypographyHeadingSizeTokensKeys = [
-  "xxxl",
-  "xxl",
-  "xl",
-  "l",
-  "m",
-  "s",
-  "xs",
-  "xxs",
-] as const;
-
-export type SysTypographyHeadingSizeTokensType = {
-  [key in (typeof SysTypographyHeadingSizeTokensKeys)[number]]:
-    | ValueOf<(typeof RefTypographyFontSizeTokens)["desktop"]>
-    | ValueOf<(typeof RefTypographyFontSizeTokens)["mobile"]>;
-};
+import { RefTypographyFontSizeTokens } from "../../../../ref-tokens";
+import { SysTypographyHeadingSizeTokensType, SysTypographyHeadingTokensSizeType } from "./sys-typography-heading-size-tokens.types";
 
 export const SysTypographyHeadingSizeDesktopTokens = {
   xxxl: RefTypographyFontSizeTokens.desktop.fontSize1300,
@@ -43,4 +26,4 @@ export const SysTypographyHeadingSizeMobileTokens = {
 export const SysTypographyHeadingSizeTokens = {
   desktop: SysTypographyHeadingSizeDesktopTokens,
   mobile: SysTypographyHeadingSizeMobileTokens,
-} as const;
+} as const satisfies SysTypographyHeadingTokensSizeType;

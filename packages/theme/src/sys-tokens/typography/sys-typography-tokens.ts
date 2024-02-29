@@ -1,9 +1,10 @@
-import { SysTypographyBodyTokens } from "./body/sys-typography-body-tokens";
-import { SysTypographyDetailTokens } from "./detail/sys-typography-detail-tokens";
-import { SysTypographyHeadingTokens } from "./heading/sys-typography-heading-tokens";
+import { SysTypographyBodyTokens } from "./body";
+import { SysTypographyDetailTokens } from "./detail";
+import { SysTypographyHeadingTokens } from "./heading";
+import { SysTypographyTokensType } from "./sys-typography-tokens.types";
 
 export const SysTypographyTokens = {
   body: SysTypographyBodyTokens,
   detail: SysTypographyDetailTokens,
   heading: SysTypographyHeadingTokens,
-} as const;
+} as const satisfies SysTypographyTokensType;

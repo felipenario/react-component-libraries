@@ -1,13 +1,5 @@
-import { RefTypographyFontSizeTokens } from "../../../ref-tokens/typography/font-size/ref-typography-font-size-tokens";
-import { ValueOf } from "../../../utils/valueOf";
-
-const SysTypographyDetailSizeTokensKeys = ["xl", "l", "m", "s"] as const;
-
-export type SysTypographyDetailSizeTokensType = {
-  [key in (typeof SysTypographyDetailSizeTokensKeys)[number]]:
-    | ValueOf<(typeof RefTypographyFontSizeTokens)["desktop"]>
-    | ValueOf<(typeof RefTypographyFontSizeTokens)["mobile"]>;
-};
+import { RefTypographyFontSizeTokens } from "../../../../ref-tokens/typography";
+import { SysTypographyDetailSizeTokensType, SysTypographyDetailTokensSizeType } from "./sys-typography-detail-size-tokens.types";
 
 export const SysTypographyDetailSizeDesktopTokens = {
   xl: RefTypographyFontSizeTokens.desktop.fontSize200,
@@ -26,4 +18,4 @@ export const SysTypographyDetailSizeMobileTokens = {
 export const SysTypographyDetailSizeTokens = {
   desktop: SysTypographyDetailSizeDesktopTokens,
   mobile: SysTypographyDetailSizeMobileTokens,
-} as const;
+} as const satisfies SysTypographyDetailTokensSizeType;

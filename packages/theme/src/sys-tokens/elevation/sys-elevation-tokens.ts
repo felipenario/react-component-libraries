@@ -1,3 +1,5 @@
+import { SysElevationTokensType } from "./sys-elevation-tokens.types";
+
 export const SysElevationTokens = {
   level0:
     "rgba(0, 0, 0, 0.2) 0px 0px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px",
@@ -11,4 +13,4 @@ export const SysElevationTokens = {
     "rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px",
   level5:
     "rgba(0, 0, 0, 0.2) 0px 7px 8px -4px, rgba(0, 0, 0, 0.14) 0px 12px 17px 2px, rgba(0, 0, 0, 0.12) 0px 5px 22px 4px",
-} as const;
+} as const satisfies SysElevationTokensType;

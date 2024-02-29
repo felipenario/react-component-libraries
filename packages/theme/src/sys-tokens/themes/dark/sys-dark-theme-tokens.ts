@@ -1,4 +1,5 @@
 import { RefPaletteTokens } from "../../../ref-tokens/palette";
+import { SysBaseThemeTokensType } from "../sys-theme-tokens.types";
 
 export const SysDarkThemeTokens = {
   primary: RefPaletteTokens.sky[950],
@@ -11,4 +12,4 @@ export const SysDarkThemeTokens = {
   onBackground: RefPaletteTokens.neutral[50],
   onSurface: RefPaletteTokens.teal[950],
   onError: RefPaletteTokens.neutral[50],
-} as const;
+} as const satisfies SysBaseThemeTokensType;

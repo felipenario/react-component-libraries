@@ -1,21 +1,5 @@
-import { RefTypographyFontSizeTokens } from "../../../ref-tokens/typography/font-size/ref-typography-font-size-tokens";
-import { ValueOf } from "../../../utils/valueOf";
-
-const SysTypographyBodySizeTokensKeys = [
-  "xxxl",
-  "xxl",
-  "xl",
-  "l",
-  "m",
-  "s",
-  "xs",
-] as const;
-
-export type SysTypographyBodySizeTokensType = {
-  [key in (typeof SysTypographyBodySizeTokensKeys)[number]]:
-    | ValueOf<(typeof RefTypographyFontSizeTokens)["desktop"]>
-    | ValueOf<(typeof RefTypographyFontSizeTokens)["mobile"]>;
-};
+import { RefTypographyFontSizeTokens } from "../../../../ref-tokens";
+import { SysTypographyBodySizeTokensType, SysTypographyBodyTokensSizeType } from "./sys-typography-body-size-tokens.types";
 
 export const SysTypographyBodySizeDesktopTokens = {
   xxxl: RefTypographyFontSizeTokens.desktop.fontSize600,
@@ -40,4 +24,4 @@ export const SysTypographyBodySizeMobileTokens = {
 export const SysTypographyBodySizeTokens = {
   desktop: SysTypographyBodySizeDesktopTokens,
   mobile: SysTypographyBodySizeMobileTokens,
-} as const;
+} as const satisfies SysTypographyBodyTokensSizeType;

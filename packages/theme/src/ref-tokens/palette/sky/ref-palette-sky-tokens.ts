@@ -1,3 +1,5 @@
+import { RefPaletteShadeType } from "../ref-palette-tokens.types";
+
 export const RefPaletteSkyTokens = {
   50: "#f0f9ff",
   100: "#e0f2fe",
@@ -10,4 +12,4 @@ export const RefPaletteSkyTokens = {
   800: "#075985",
   900: "#0c4a6e",
   950: "#082f49",
-} as const;
+} as const satisfies RefPaletteShadeType;
