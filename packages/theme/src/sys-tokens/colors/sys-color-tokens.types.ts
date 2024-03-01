@@ -1,4 +1,4 @@
-export type SysBaseThemeTokensType = {
+export type SysBaseColorTokensType = {
   primary: string;
   secondary: string;
   background: string;
@@ -11,7 +11,7 @@ export type SysBaseThemeTokensType = {
   onError: string;
 };
 
-export type SysThemeTokensType = {
-  dark: SysBaseThemeTokensType;
-  light: SysBaseThemeTokensType;
+export type SysColorTokensType = {
+  dark: SysBaseColorTokensType;
+  light: SysBaseColorTokensType;
 };

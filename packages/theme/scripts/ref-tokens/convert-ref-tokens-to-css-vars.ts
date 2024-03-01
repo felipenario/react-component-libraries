@@ -3,8 +3,11 @@ import { converRefTypographyTokensToCssVars } from "./convert-ref-typography-tok
 import { convertRefSpacingTokensToCssVars } from "./convert-ref-spacing-tokens-to-css-vars";
 import { format } from "prettier";
 import { writeFileSync } from "fs";
+import picocolors from "picocolors";
 
 export const convertRefTokensToCssVars = async () => {
+  const start = performance.now();
+
   const refTokensCssVars = [
     ...convertRefPaletteTokensToCssVars(),
     ...convertRefSpacingTokensToCssVars(),
@@ -21,6 +24,12 @@ export const convertRefTokensToCssVars = async () => {
   );
 
   writeFileSync(`./public/ref-tokens-vars.css`, formattedContent);
+
+  const end = performance.now();
+
+  console.log(picocolors.green(
+    `[ref-tokens] Ref tokens CSS vars generated in ${end - start}ms.`
+  ));
 };
 
 convertRefTokensToCssVars();

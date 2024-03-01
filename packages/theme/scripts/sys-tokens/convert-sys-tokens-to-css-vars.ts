@@ -1,12 +1,16 @@
 import { convertSysBreakpointTokensToCssVars } from "./convert-sys-breakpoint-tokens-to-css-vars";
 import { convertSysElevationTokensToCssVars } from "./convert-sys-elevation-tokens-to-css-vars";
 import { convertSysShapeTokensToCssVars } from "./convert-sys-shape-tokens-to-css-vars";
-import { convertSysThemeTokensToCssVars } from "./convert-sys-theme-tokens-to-css-vars";
+import { convertSysColorTokensToCssVars } from "./convert-sys-color-tokens-to-css-vars";
 import { convertSysTypographyTokensToCssVariables } from "./convert-sys-typography-tokens-to-css-vars";
 import { format } from "prettier";
 import { writeFileSync } from "fs";
+import { SysBreakpointTokens } from "../../src/sys-tokens/breakpoints";
+import picocolors from "picocolors";
 
 export const convertSysTokensToCssVars = async () => {
+  const start = performance.now();
+
   const generalCssVariables = [
     ...convertSysBreakpointTokensToCssVars(),
     ...convertSysElevationTokensToCssVars(),
@@ -14,7 +18,7 @@ export const convertSysTokensToCssVars = async () => {
   ];
 
   const { lightThemeCssVariables, darkThemeCssVariables } =
-    convertSysThemeTokensToCssVars();
+    convertSysColorTokensToCssVars();
 
   const {
     commonTypographyCssVariables,
@@ -41,7 +45,7 @@ export const convertSysTokensToCssVars = async () => {
         }
       }
       
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: ${SysBreakpointTokens.xl}) {
         :root {
           ${desktopFontSizeCssVariables.join("\n")}
         }
@@ -53,6 +57,14 @@ export const convertSysTokensToCssVars = async () => {
   );
 
   writeFileSync(`./public/sys-tokens-vars.css`, formattedContent);
+
+  const end = performance.now();
+
+  console.log(
+    picocolors.green(
+      `[sys-tokens] Sys tokens CSS vars generated in ${end - start}ms.`
+    )
+  );
 };
 
 convertSysTokensToCssVars();

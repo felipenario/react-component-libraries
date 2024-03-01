@@ -1,7 +1,10 @@
+import picocolors from "picocolors";
 import { SysTypographyTokens } from "../../src/sys-tokens/typography";
 import lodash from "lodash";
 
 export const convertSysTypographyTokensToCssVariables = () => {
+  const start = performance.now();
+
   const commonTypographyCssVariables: string[] = [];
 
   const desktopFontSizeCssVariables: string[] = [];
@@ -63,6 +66,14 @@ export const convertSysTypographyTokensToCssVariables = () => {
       }
     }
   }
+
+  const end = performance.now();
+
+  console.log(
+    picocolors.green(
+      `[sys-tokens: typography] CSS vars generated in ${end - start}ms.`
+    )
+  );
 
   return {
     commonTypographyCssVariables,

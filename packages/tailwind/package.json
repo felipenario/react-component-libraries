@@ -2,7 +2,6 @@
   "name": "@components/tailwind",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -12,16 +11,17 @@
       "import": "./dist/index.js",
       "require": "./dist/index.umd.js"
     },
-    "./ref-tokens-vars": "./dist/ref-tokens-vars.css",
-    "./sys-tokens-vars": "./dist/sys-tokens-vars.css"
+    "./plugin": "./dist/plugin"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && npm run gen-ref-tokens-css-vars && npm run gen-sys-tokens-css-vars && vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "@components/theme": "*"
+  },
   "devDependencies": {
-    "@components/theme": "*",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.4"

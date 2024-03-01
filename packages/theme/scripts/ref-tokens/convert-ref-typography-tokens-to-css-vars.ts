@@ -1,7 +1,10 @@
 import lodash from "lodash";
 import { RefTypographyTokens } from "../../src/ref-tokens/typography";
+import picocolors from "picocolors";
 
 export const converRefTypographyTokensToCssVars = () => {
+  const start = performance.now();
+
   const cssVariables: string[] = [];
 
   // font-size variables.
@@ -43,6 +46,14 @@ export const converRefTypographyTokensToCssVars = () => {
       `--ref-typography-font-weight-${lineHeightToken}: ${lineHeightValue};`
     );
   }
+
+  const end = performance.now();
+
+  console.log(
+    picocolors.green(
+      `[ref-tokens: typography] CSS vars generated in ${end - start}ms.`
+    )
+  );
 
   return cssVariables;
 };

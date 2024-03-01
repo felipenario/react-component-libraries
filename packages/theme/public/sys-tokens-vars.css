@@ -86,7 +86,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   :root {
     --sys-typography-body-size-xxxl: 1.563rem;
     --sys-typography-body-size-xxl: 1.375rem;

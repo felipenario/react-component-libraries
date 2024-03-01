@@ -7,8 +7,8 @@ import {
 import {
   mapSysBreakpointTokensToTailwindConfig,
   mapSysElevationTokensToTailwindConfig,
+  mapSysColorTokensToTailwindConfig,
   mapSysShapeTokensToTailwindConfig,
-  mapSysThemeTokensToTailwindConfig,
 } from "../mappers/tailwind-config/sys-tokens";
 
 // ref-tokens
@@ -23,12 +23,12 @@ const { refFontSizeTokens, refFontWeightTokens, refLineHeightTokens } =
 
 const sysBreakpointTokens = mapSysBreakpointTokensToTailwindConfig();
 
+const sysColorTokens = mapSysColorTokensToTailwindConfig();
+
 const sysElevationTokens = mapSysElevationTokensToTailwindConfig();
 
 const { sysBorderWidthTokens, sysShapeCornerTokens } =
   mapSysShapeTokensToTailwindConfig();
-
-const sysThemeTokens = mapSysThemeTokensToTailwindConfig();
 
 export const TailwindConfig: Config = {
   content: [],
@@ -39,7 +39,7 @@ export const TailwindConfig: Config = {
     boxShadow: sysElevationTokens,
     colors: {
       "ref-palette": refPaletteTokens,
-      ...sysThemeTokens,
+      ...sysColorTokens,
     },
     fontFamily: {},
     fontSize: refFontSizeTokens,

@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
+import tailwindcss from "tailwindcss";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,6 +10,11 @@ export default defineConfig({
       insertTypesEntry: true,
     }),
   ],
+  css: {
+    postcss: {
+      plugins: [tailwindcss],
+    },
+  },
   build: {
     sourcemap: true,
     copyPublicDir: true,
@@ -26,7 +32,22 @@ export default defineConfig({
     },
     rollupOptions: {
       treeshake: true,
-      external: ["./scripts"],
+      external: [
+        "@components/theme",
+        "react",
+        "react/jsx-runtime",
+        "react-dom",
+        "tailwindcss",
+      ],
+      output: {
+        globals: {
+          react: "React",
+          "react/jsx-runtime": "react/jsx-runtime",
+          "react-dom": "ReactDOM",
+          tailwindcss: "tailwindcss",
+          "@components/theme": "@components/theme",
+        },
+      },
     },
   },
 });
