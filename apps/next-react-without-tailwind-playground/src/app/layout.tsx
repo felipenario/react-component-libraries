@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@components/react-tailwind/dist/style.css";
+import "@components/theme/ref-tokens-vars";
+import "@components/theme/sys-tokens-vars";
 
 const inter = Inter({ subsets: ["latin"] });
 

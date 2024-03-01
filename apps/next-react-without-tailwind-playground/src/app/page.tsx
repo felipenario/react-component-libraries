@@ -1,9 +1,16 @@
-import { Button } from "@components/react-tailwind";
+import { RefPaletteAmberTokens } from "@components/theme";
 
 export default function Home() {
   return (
     <>
-      <Button />
+      <div
+        style={{
+          backgroundColor: "var(--sys-color-primary)",
+        }}
+      >
+        DIV MUITO LOUCA E TEMATIZADA
+      </div>
+      {RefPaletteAmberTokens[100]}
     </>
   );
 }

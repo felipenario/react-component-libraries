@@ -1,11 +1,13 @@
 import { convertRefPaletteTokensToCssVars } from "./convert-ref-palette-tokens-to-css-vars";
 import { converRefTypographyTokensToCssVars } from "./convert-ref-typography-tokens-to-css-vars";
+import { convertRefSpacingTokensToCssVars } from "./convert-ref-spacing-tokens-to-css-vars";
 import { format } from "prettier";
 import { writeFileSync } from "fs";
 
 export const convertRefTokensToCssVars = async () => {
   const refTokensCssVars = [
     ...convertRefPaletteTokensToCssVars(),
+    ...convertRefSpacingTokensToCssVars(),
     ...converRefTypographyTokensToCssVars(),
   ];
 

@@ -1,4 +1,3 @@
-import { tailwindPlugin } from "@components/react-tailwind";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -10,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {},
   },
-  plugins: [tailwindPlugin],
+  plugins: [],
 };
 
 export default config;

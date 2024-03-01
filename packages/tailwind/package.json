@@ -1,5 +1,5 @@
 {
-  "name": "@components/theme",
+  "name": "@components/tailwind",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -18,11 +18,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && npm run gen-ref-tokens-css-vars && npm run gen-sys-tokens-css-vars && vite build",
-    "preview": "vite preview",
-    "gen-ref-tokens-css-vars": "node --experimental-specifier-resolution=node --loader ts-node/esm scripts/ref-tokens/convert-ref-tokens-to-css-vars.ts",
-    "gen-sys-tokens-css-vars": "node --experimental-specifier-resolution=node --loader ts-node/esm scripts/sys-tokens/convert-sys-tokens-to-css-vars.ts"
+    "preview": "vite preview"
   },
   "devDependencies": {
+    "@components/theme": "*",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.4"
   }

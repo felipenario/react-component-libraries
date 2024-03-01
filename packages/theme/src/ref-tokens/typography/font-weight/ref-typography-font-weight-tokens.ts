@@ -1,3 +1,5 @@
+import { RefTypographyFontWeightTokensType } from "./ref-typography-font-weight-tokens.types";
+
 export const RefTypographyFontWeightTokens = {
   light: "300",
   regular: "400",
@@ -5,4 +7,4 @@ export const RefTypographyFontWeightTokens = {
   bold: "700",
   extraBold: "800",
   black: "900",
-} as const;
+} as const satisfies RefTypographyFontWeightTokensType;

@@ -1,3 +1,4 @@
+export * from "./breakpoints";
 export * from "./elevation";
 export * from "./shape";
 export * from "./themes";

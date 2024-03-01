@@ -1,9 +1,17 @@
-import { Button } from "@components/react-tailwind";
+import { CustomButton } from "./components/CustomButton";
 
 function App() {
   return (
     <>
-      <Button />
+      <CustomButton
+        className="p-4"
+        shape="xs"
+        style={{
+          backgroundColor: "var(--sys-color-primary)",
+        }}
+      >
+        Teste
+      </CustomButton>
     </>
   );
 }

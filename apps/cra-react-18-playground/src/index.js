@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "@components/theme/ref-tokens-vars";
+import "@components/theme/sys-tokens-vars";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

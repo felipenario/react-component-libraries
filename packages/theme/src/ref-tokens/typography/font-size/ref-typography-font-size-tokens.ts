@@ -1,3 +1,8 @@
+import {
+  RefTypographyFontSizeTokensScaleType,
+  RefTypographyFontSizeTokensType,
+} from "./ref-typography-font-size-tokens.types";
+
 export const RefTypographyFontSizeDesktopScaleTokens = {
   fontSize50: "0.688rem",
   fontSize75: "0.75rem",
@@ -14,7 +19,7 @@ export const RefTypographyFontSizeDesktopScaleTokens = {
   fontSize1100: "2.813rem",
   fontSize1200: "3.125rem",
   fontSize1300: "3.75rem",
-} as const;
+} as const satisfies RefTypographyFontSizeTokensScaleType;
 
 export const RefTypographyFontSizeMobileScaleTokens = {
   fontSize50: "0.813rem",
@@ -32,9 +37,9 @@ export const RefTypographyFontSizeMobileScaleTokens = {
   fontSize1100: "3.438rem",
   fontSize1200: "3.875rem",
   fontSize1300: "4.375rem",
-} as const;
+} as const satisfies RefTypographyFontSizeTokensScaleType;
 
 export const RefTypographyFontSizeTokens = {
   desktop: RefTypographyFontSizeDesktopScaleTokens,
   mobile: RefTypographyFontSizeMobileScaleTokens,
-} as const;
+} as const satisfies RefTypographyFontSizeTokensType;

@@ -1,4 +1,9 @@
 :root {
+  --sys-breakpoint-sm: 640px;
+  --sys-breakpoint-md: 768px;
+  --sys-breakpoint-lg: 1024px;
+  --sys-breakpoint-xl: 1280px;
+  --sys-breakpoint-2xl: 1536px;
   --sys-elevation-level-0: rgba(0, 0, 0, 0.2) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
   --sys-elevation-level-1: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
@@ -26,6 +31,9 @@
   --sys-typography-detail-font-weight-light: 400;
   --sys-typography-detail-font-weight-default: 700;
   --sys-typography-detail-line-height: 1.3;
+  --sys-typography-heading-font-weight-light: 300;
+  --sys-typography-heading-font-weight-default: 500;
+  --sys-typography-heading-font-weight-heavy: 700;
   --sys-typography-heading-line-height: 1.3;
   --sys-typography-body-size-xxxl: 1.938rem;
   --sys-typography-body-size-xxl: 1.688rem;

@@ -1,3 +1,4 @@
+import { convertSysBreakpointTokensToCssVars } from "./convert-sys-breakpoint-tokens-to-css-vars";
 import { convertSysElevationTokensToCssVars } from "./convert-sys-elevation-tokens-to-css-vars";
 import { convertSysShapeTokensToCssVars } from "./convert-sys-shape-tokens-to-css-vars";
 import { convertSysThemeTokensToCssVars } from "./convert-sys-theme-tokens-to-css-vars";
@@ -7,6 +8,7 @@ import { writeFileSync } from "fs";
 
 export const convertSysTokensToCssVars = async () => {
   const generalCssVariables = [
+    ...convertSysBreakpointTokensToCssVars(),
     ...convertSysElevationTokensToCssVars(),
     ...convertSysShapeTokensToCssVars(),
   ];

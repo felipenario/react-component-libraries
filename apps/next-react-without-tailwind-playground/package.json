@@ -9,11 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@components/theme": "*",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4",
-    "@components/react-tailwind": "*",
-    "@components/react-panda": "*"
+    "next": "14.0.4"
   },
   "devDependencies": {
     "typescript": "^5",
