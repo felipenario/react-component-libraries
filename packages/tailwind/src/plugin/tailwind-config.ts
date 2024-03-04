@@ -9,6 +9,7 @@ import {
   mapSysElevationTokensToTailwindConfig,
   mapSysColorTokensToTailwindConfig,
   mapSysShapeTokensToTailwindConfig,
+  mapSysTypographyTokensToTailwindConfig,
 } from "../mappers/tailwind-config/sys-tokens";
 
 // ref-tokens
@@ -30,6 +31,18 @@ const sysElevationTokens = mapSysElevationTokensToTailwindConfig();
 const { sysBorderWidthTokens, sysShapeCornerTokens } =
   mapSysShapeTokensToTailwindConfig();
 
+const {
+  sysBodyFontSizeTokens,
+  sysBodyFontWeightTokens,
+  sysBodyLineHeightTokens,
+  sysDetailFontSizeTokens,
+  sysDetailFontWeightTokens,
+  sysDetailLineHeightTokens,
+  sysHeadingFontSizeTokens,
+  sysHeadingFontWeightTokens,
+  sysHeadingLineHeightTokens,
+} = mapSysTypographyTokensToTailwindConfig();
+
 export const TailwindConfig: Config = {
   content: [],
   darkMode: "class",
@@ -42,9 +55,24 @@ export const TailwindConfig: Config = {
       ...sysColorTokens,
     },
     fontFamily: {},
-    fontSize: refFontSizeTokens,
-    fontWeight: refFontWeightTokens,
-    lineHeight: refLineHeightTokens,
+    fontSize: {
+      ...refFontSizeTokens,
+      ...sysBodyFontSizeTokens,
+      ...sysDetailFontSizeTokens,
+      ...sysHeadingFontSizeTokens,
+    },
+    fontWeight: {
+      ...refFontWeightTokens,
+      ...sysBodyFontWeightTokens,
+      ...sysDetailFontWeightTokens,
+      ...sysHeadingFontWeightTokens,
+    },
+    lineHeight: {
+      ...refLineHeightTokens,
+      ...sysBodyLineHeightTokens,
+      ...sysDetailLineHeightTokens,
+      ...sysHeadingLineHeightTokens,
+    },
     screens: sysBreakpointTokens,
     spacing: refSpacingTokens,
     size: {},

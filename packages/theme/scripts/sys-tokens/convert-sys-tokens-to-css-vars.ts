@@ -33,16 +33,12 @@ export const convertSysTokensToCssVars = async () => {
         ${mobileFontSizeCssVariables.join("\n")}
       }
     
-      @media (prefers-color-scheme: light) {
-        :root {
-          ${lightThemeCssVariables.join("\n")}
-        }
+      html[data-theme="light"] {
+        ${lightThemeCssVariables.join("\n")}
       }
 
-      @media (prefers-color-scheme: dark) {
-        :root {
-          ${darkThemeCssVariables.join("\n")}
-        }
+      html[data-theme="dark"] {
+        ${darkThemeCssVariables.join("\n")}
       }
       
       @media screen and (min-width: ${SysBreakpointTokens.xl}) {

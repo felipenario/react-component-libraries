@@ -34,7 +34,9 @@ export const converRefTypographyTokensToCssVars = () => {
     RefTypographyTokens.fontWeight
   )) {
     cssVariables.push(
-      `--ref-typography-font-weight-${fontWeightToken}: ${fontWeightValue};`
+      `--ref-typography-font-weight-${lodash.kebabCase(
+        fontWeightToken
+      )}: ${fontWeightValue};`
     );
   }
 

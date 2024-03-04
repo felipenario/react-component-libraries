@@ -2,14 +2,14 @@ import { RefPaletteTokens } from "../../../ref-tokens/palette";
 import { SysBaseColorTokensType } from "../sys-color-tokens.types";
 
 export const SysLightColorTokens = {
-  primary: RefPaletteTokens.sky[700],
-  secondary: RefPaletteTokens.teal[700],
-  background: RefPaletteTokens.neutral[50],
-  surface: RefPaletteTokens.neutral[50],
-  error: RefPaletteTokens.red[600],
-  onPrimary: RefPaletteTokens.sky[900],
-  onSecondary: RefPaletteTokens.teal[900],
-  onBackground: RefPaletteTokens.neutral[950],
-  onSurface: RefPaletteTokens.neutral[950],
-  onError: RefPaletteTokens.neutral[50],
+  primary: RefPaletteTokens.emerald[500],
+  secondary: RefPaletteTokens.cyan[500],
+  background: RefPaletteTokens.neutral[100],
+  surface: RefPaletteTokens.neutral[200],
+  error: RefPaletteTokens.red[500],
+  onPrimary: RefPaletteTokens.neutral[900],
+  onSecondary: RefPaletteTokens.neutral[900],
+  onBackground: RefPaletteTokens.neutral[900],
+  onSurface: RefPaletteTokens.neutral[900],
+  onError: RefPaletteTokens.neutral[900],
 } as const satisfies SysBaseColorTokensType;

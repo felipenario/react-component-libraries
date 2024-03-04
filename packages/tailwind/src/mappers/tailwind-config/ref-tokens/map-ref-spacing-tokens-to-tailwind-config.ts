@@ -4,7 +4,7 @@ export const mapRefSpacingTokensToTailwindConfig = () => {
   const spacings: Record<string, any> = {};
 
   for (const [spacingToken, _] of Object.entries(RefSpacingTokens)) {
-    spacings[`--ref-spacing-${spacingToken}`] =
+    spacings[`ref-spacing-${spacingToken}`] =
       `var(--ref-spacing-${spacingToken})`;
   }
 

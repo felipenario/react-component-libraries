@@ -1,12 +1,9 @@
 import type { Config } from "tailwindcss";
-import { tailwindPlugin } from "./src/plugin";
+import { TailwindPlugin } from "@components/tailwind";
 
 const config: Config = {
   content: [],
-  theme: {
-    colors: {}
-  },
-  plugins: [tailwindPlugin],
+  plugins: [TailwindPlugin],
 };
 
 export default config;

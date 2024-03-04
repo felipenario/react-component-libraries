@@ -56,34 +56,30 @@
   --sys-typography-heading-size-xxs: 1.063rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --sys-color-primary: #0369a1;
-    --sys-color-secondary: #0f766e;
-    --sys-color-background: #f9fafb;
-    --sys-color-surface: #f9fafb;
-    --sys-color-error: #dc2626;
-    --sys-color-on-primary: #0c4a6e;
-    --sys-color-on-secondary: #134e4a;
-    --sys-color-on-background: #030712;
-    --sys-color-on-surface: #030712;
-    --sys-color-on-error: #f9fafb;
-  }
+html[data-theme="light"] {
+  --sys-color-primary: #10b981;
+  --sys-color-secondary: #06b6d4;
+  --sys-color-background: #f5f5f5;
+  --sys-color-surface: #e5e5e5;
+  --sys-color-error: #ef4444;
+  --sys-color-on-primary: #171717;
+  --sys-color-on-secondary: #171717;
+  --sys-color-on-background: #171717;
+  --sys-color-on-surface: #171717;
+  --sys-color-on-error: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sys-color-primary: #082f49;
-    --sys-color-secondary: #042f2e;
-    --sys-color-background: #082f49;
-    --sys-color-surface: #0f766e;
-    --sys-color-error: #dc2626;
-    --sys-color-on-primary: #0369a1;
-    --sys-color-on-secondary: #0f766e;
-    --sys-color-on-background: #f9fafb;
-    --sys-color-on-surface: #042f2e;
-    --sys-color-on-error: #f9fafb;
-  }
+html[data-theme="dark"] {
+  --sys-color-primary: #10b981;
+  --sys-color-secondary: #06b6d4;
+  --sys-color-background: #171717;
+  --sys-color-surface: #262626;
+  --sys-color-error: #ef4444;
+  --sys-color-on-primary: #fafafa;
+  --sys-color-on-secondary: #fafafa;
+  --sys-color-on-background: #fafafa;
+  --sys-color-on-surface: #fafafa;
+  --sys-color-on-error: #fafafa;
 }
 
 @media screen and (min-width: 1280px) {
