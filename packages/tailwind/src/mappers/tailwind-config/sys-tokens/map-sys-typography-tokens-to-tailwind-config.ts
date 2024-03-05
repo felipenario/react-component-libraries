@@ -101,7 +101,7 @@ const mapSysTypographyDetailTokens = () => {
     )) {
       sysDetailFontSizeTokens[
         `sys-typography-detail-size-${detailFontSizeToken}`
-      ] = `var(--sys-typography-body-size-${detailFontSizeToken})`;
+      ] = `var(--sys-typography-detail-size-${detailFontSizeToken})`;
     }
   }
 

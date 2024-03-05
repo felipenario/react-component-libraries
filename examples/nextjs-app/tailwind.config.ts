@@ -9,5 +9,5 @@ const config: Config = {
     "../../node_modules/@components/react-tailwind/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   plugins: [TailwindPlugin],
-};
+} satisfies Config;
 export default config;

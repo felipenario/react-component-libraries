@@ -22,8 +22,5 @@
     "gen-ref-tokens-css-vars": "node --experimental-specifier-resolution=node --loader ts-node/esm scripts/ref-tokens/convert-ref-tokens-to-css-vars.ts",
     "gen-sys-tokens-css-vars": "node --experimental-specifier-resolution=node --loader ts-node/esm scripts/sys-tokens/convert-sys-tokens-to-css-vars.ts"
   },
-  "devDependencies": {
-    "typescript": "^5.2.2",
-    "vite": "^5.1.4"
-  }
+  "devDependencies": {}
 }
