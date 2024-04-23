@@ -15,10 +15,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@components/theme": "*",
+    "@components/theme": "workspace:*",
     "clsx": "^2.1.0",
     "tailwind-merge": "^2.2.1"
   },

@@ -1,4 +1,4 @@
-export type RefTypographyFontSizeTokensScaleType = {
+export type RefTypographyFontSizeTokensType = {
   fontSize50: string;
   fontSize75: string;
   fontSize100: string;
@@ -14,9 +14,4 @@ export type RefTypographyFontSizeTokensScaleType = {
   fontSize1100: string;
   fontSize1200: string;
   fontSize1300: string;
-};
-
-export type RefTypographyFontSizeTokensType = {
-  desktop: RefTypographyFontSizeTokensScaleType;
-  mobile: RefTypographyFontSizeTokensScaleType;
 };

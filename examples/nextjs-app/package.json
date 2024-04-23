@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@components/react-tailwind": "*",
-    "@components/tailwind": "*",
-    "@components/theme": "*",
+    "@components/react-tailwind": "workspace:*",
+    "@components/tailwind": "workspace:*",
+    "@components/theme": "workspace:*",
     "react": "^18",
     "react-dom": "^18",
     "next": "14.1.1"

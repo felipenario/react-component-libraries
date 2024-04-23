@@ -18,6 +18,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && npm run gen-ref-tokens-css-vars && npm run gen-sys-tokens-css-vars && vite build",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "preview": "vite preview",
     "gen-ref-tokens-css-vars": "node --experimental-specifier-resolution=node --loader ts-node/esm scripts/ref-tokens/convert-ref-tokens-to-css-vars.ts",
     "gen-sys-tokens-css-vars": "node --experimental-specifier-resolution=node --loader ts-node/esm scripts/sys-tokens/convert-sys-tokens-to-css-vars.ts"
