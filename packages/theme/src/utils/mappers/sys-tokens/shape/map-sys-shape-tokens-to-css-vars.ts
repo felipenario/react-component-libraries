@@ -2,14 +2,13 @@ import picocolors from "picocolors";
 import {
   SysShapeBorderWidthTokens,
   SysShapeCornerTokens,
-} from "../../src/sys-tokens/shape";
+} from "../../../../sys-tokens";
 
-export const convertSysShapeTokensToCssVars = () => {
+export const mapSysShapeTokensToCssVars = () => {
   const start = performance.now();
 
   const cssVariables: string[] = [];
 
-  // border-width variables.
   for (const [borderWidthToken, borderWidthTokenValue] of Object.entries(
     SysShapeBorderWidthTokens
   )) {
@@ -18,7 +17,6 @@ export const convertSysShapeTokensToCssVars = () => {
     );
   }
 
-  // border-radius variables.
   for (const [borderRadiusToken, borderRadiusTokenValue] of Object.entries(
     SysShapeCornerTokens
   )) {
@@ -31,7 +29,7 @@ export const convertSysShapeTokensToCssVars = () => {
 
   console.log(
     picocolors.green(
-      `[sys-tokens: shape] CSS vars generated in ${end - start}ms.`
+      `[sys-tokens: shape] CSS vars generated in ${(end - start).toFixed(2)}ms.`
     )
   );
 

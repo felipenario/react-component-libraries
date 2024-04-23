@@ -1,7 +1,7 @@
-import { RefPaletteTokens } from "../../src/ref-tokens/palette";
 import picocolors from "picocolors";
+import { RefPaletteTokens } from "../../../../ref-tokens";
 
-export const convertRefPaletteTokensToCssVars = () => {
+export const mapRefPaletteTokensToCssVars = () => {
   const start = performance.now();
 
   const cssVariables: string[] = [];
@@ -16,7 +16,7 @@ export const convertRefPaletteTokensToCssVars = () => {
 
   console.log(
     picocolors.green(
-      `[ref-tokens: palette] CSS vars generated in ${end - start}ms.`
+      `[ref-tokens: palette] CSS vars generated in ${(end - start).toFixed(2)}ms.`
     )
   );
 

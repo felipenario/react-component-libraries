@@ -2,23 +2,21 @@ import lodash from "lodash";
 import {
   SysDarkColorTokens,
   SysLightColorTokens,
-} from "../../src/sys-tokens/colors";
+} from "../../../../sys-tokens";
 import picocolors from "picocolors";
 
-export const convertSysColorTokensToCssVars = () => {
+export const mapSysColorTokensToCssVars = () => {
   const start = performance.now();
 
   const lightThemeCssVariables: string[] = [];
   const darkThemeCssVariables: string[] = [];
 
-  // Light Theme tokens.
   for (const [tokenType, hexCode] of Object.entries(SysLightColorTokens)) {
     lightThemeCssVariables.push(
       `--sys-color-${lodash.kebabCase(tokenType)}: ${hexCode};`
     );
   }
 
-  // Dark Theme tokens.
   for (const [tokenType, hexCode] of Object.entries(SysDarkColorTokens)) {
     darkThemeCssVariables.push(
       `--sys-color-${lodash.kebabCase(tokenType)}: ${hexCode};`
@@ -29,7 +27,7 @@ export const convertSysColorTokensToCssVars = () => {
 
   console.log(
     picocolors.green(
-      `[sys-tokens: color] CSS vars generated in ${end - start}ms.`
+      `[sys-tokens: color] CSS vars generated in ${(end - start).toFixed(2)}ms.`
     )
   );
 

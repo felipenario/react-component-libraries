@@ -1,7 +1,7 @@
 import picocolors from "picocolors";
-import { SysBreakpointTokens } from "../../src/sys-tokens/breakpoints";
+import { SysBreakpointTokens } from "../../../../sys-tokens";
 
-export const convertSysBreakpointTokensToCssVars = () => {
+export const mapSysBreakpointTokensToCssVars = () => {
   const start = performance.now();
 
   const cssVariables: string[] = [];
@@ -18,7 +18,7 @@ export const convertSysBreakpointTokensToCssVars = () => {
 
   console.log(
     picocolors.green(
-      `[sys-tokens: breakpoint] CSS vars generated in ${end - start}ms.`
+      `[sys-tokens: breakpoint] CSS vars generated in ${(end - start).toFixed(2)}ms.`
     )
   );
 

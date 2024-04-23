@@ -1,5 +1,5 @@
-export * from "./breakpoints";
-export * from "./colors";
+export * from "./breakpoint";
+export * from "./color";
 export * from "./elevation";
 export * from "./opacity";
 export * from "./shape";

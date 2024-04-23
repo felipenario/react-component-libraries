@@ -24,6 +24,11 @@
     "stripInternal": true,
     "allowSyntheticDefaultImports": true
   },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
   "include": ["packages"],
   "exclude": ["node_modules", "packages/**/dist/**"]
 }

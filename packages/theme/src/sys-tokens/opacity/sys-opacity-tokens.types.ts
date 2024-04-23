@@ -1,0 +1,23 @@
+export type SysOpacityTokensType = {
+  opacity0: number;
+  opacity5: number;
+  opacity10: number;
+  opacity15: number;
+  opacity20: number;
+  opacity25: number;
+  opacity30: number;
+  opacity35: number;
+  opacity40: number;
+  opacity45: number;
+  opacity50: number;
+  opacity55: number;
+  opacity60: number;
+  opacity65: number;
+  opacity70: number;
+  opacity75: number;
+  opacity80: number;
+  opacity85: number;
+  opacity90: number;
+  opacity95: number;
+  opacity100: number;
+};

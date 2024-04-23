@@ -1,8 +1,8 @@
 import lodash from "lodash";
-import { SysElevationTokens } from "../../src/sys-tokens/elevation";
+import { SysElevationTokens } from "../../../../sys-tokens";
 import picocolors from "picocolors";
 
-export const convertSysElevationTokensToCssVars = () => {
+export const mapSysElevationTokensToCssVars = () => {
   const start = performance.now();
 
   const cssVariables: string[] = [];
@@ -21,7 +21,7 @@ export const convertSysElevationTokensToCssVars = () => {
 
   console.log(
     picocolors.green(
-      `[sys-tokens: elevation] CSS vars generated in ${end - start}ms.`
+      `[sys-tokens: elevation] CSS vars generated in ${(end - start).toFixed(2)}ms.`
     )
   );
 
